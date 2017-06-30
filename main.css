@@ -1,0 +1,65 @@
+.modal {
+  box-shadow: 0px -2px 24px rgba(0,0,0,.12);
+  margin: 200px auto;
+  max-width: 300px;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
+}
+.modal > div {
+  border: 1px solid rgba(0,0,0,.1);
+}
+.title {
+  padding: 20px;
+  background-color: rgba(0,0,0,.05);
+  overflow: scroll;
+}
+.label {
+  padding: 15px;
+  color: rgba(0,0,0,.5);
+}
+.tree {
+  min-height: 300px;
+}
+.folder {
+  cursor: pointer;
+  width: 100%;
+  padding: 5px 0;
+  margin-left: -40px;
+  padding-left: 40px;
+  overflow: auto;
+}
+.subfolder {
+  margin-left: -80px;
+  padding-left: 80px;
+}
+.folder:hover {
+  background-color: rgba(24,109,248, .7);
+}
+.active {
+  background-color: rgba(240,4,4, .5);
+}
+.footer {
+  height: 60px;
+  position: relative;
+}
+.button {
+    background-color: rgba(24,109,248, .7);
+    border: none;
+    color: white;
+    padding: 10px 16px;
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
+a {
+  position: absolute;
+  top: 20px;
+  left: 10px;
+  text-decoration: none;
+  color: rgba(24,109,248, .7);
+}

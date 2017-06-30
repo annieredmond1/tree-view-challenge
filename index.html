@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+    <html ng-app='explorerApp'>
+    <head>
+      <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+      <link rel="stylesheet" type="text/css" href="main.css" />
+      <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular.min.js"></script>
+          <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular-route.js"></script>
+      <script src="script.js"></script>
+    </head>
+    <body ng-controller='mainController as main'>
+
+      <div id='main'>
+          <div class='modal'>
+            <div class='title'>
+              Title
+            </div>
+            <div class='label'>
+              Label
+            </div>
+            <div class='tree'>
+              <ul>
+                <li ng-repeat='folder in main.data'>
+                  <div class="folder" ng-class="{'active': folder.show}" ng-click='folder.show = !folder.show'>{{folder.name}}</div>
+                  <ul ng-show='folder.show'>
+                    <li ng-repeat='subfolder in folder.children'>
+                      <div class='folder subfolder' ng-class="{'active': subfolder.show}" ng-click='subfolder.show = !subfolder.show'>{{subfolder.name}}</div>
+                      <ul ng-show='subfolder.show'>
+                        <li ng-repeat='subsubfolder in subfolder.children'>
+                          <div class='folder {active: subfolder.show}'>{{subsubfolder.name}}</div>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+            <div class='footer'>
+              <a href='' >Link</a>
+              <div class='button'>
+                <span>Done</span>
+              </div>
+            </div>
+          </div>
+      </div>
+
+    </body>
+    </html>
